@@ -2,7 +2,22 @@ $( "document" ).ready(function() { //this helps your jQuery to work. Write all o
 
 $("#button").click(function(){
     let inputText = $("input").val();
-    $(".output").text(inputText);
+    
+     let finalResult= "";
+     let anything= $(".input").val();
+     let arr = anything.split(" ")
+     arr.forEach(function(word){
+        var first= word.charAt(0);
+        var result= word.substr(1);
+        result= result + first + "ay"
+        finalResult = finalResult + " " + result; 
+     });
+
+
+    $(".output").text(finalResult);
+});
+    
+
 
 
 
